@@ -14,9 +14,6 @@ import * as classes from "./Layout.module.scss"
 console.log(classes)
 
 const Layout = ({ children }) => {
-  let vh = window.innerHeight * 0.01
-  document.documentElement.style.setProperty("--vh", `${vh}px`)
-
   return (
     <>
       <div className="container position-absolute">

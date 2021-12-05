@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import Menu from "../Menu"
 
 import * as classes from "./Layout.module.scss"
+import Scroll from "../Scroll/Scroll"
 
 console.log(classes)
 
@@ -17,21 +18,19 @@ const Layout = ({ children }) => {
   return (
     <>
       <div className="container position-absolute">
-        <div className="row align-items-center full-height">
+        <div className="row align-items-center min-full-height">
           <section className={"col-3 " + classes.menu}>
             <Menu />
           </section>
           <div className={"col-1 " + classes.scroll}>
-            |<br />
-            |<br />
-            |<br />
-            |<br />
-            |<br />
-            |<br />
-            |<br />
-            |<br />
+            <Scroll value={0} maxValue={100} />
           </div>
-          <main className={"col-8 " + classes.content}>{children}</main>
+          <main
+            id="scrollContainer"
+            className={"col-8 full-height " + classes.content}
+          >
+            {children}
+          </main>
         </div>
       </div>
     </>

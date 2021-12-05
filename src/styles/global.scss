@@ -16,9 +16,19 @@ body {
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
 
-.full-height {
+.min-full-height {
   min-height: 100vh;
   min-height: calc(var(--vh, 1vh) * 100);
+}
+
+.full-height,
+.slide {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+.slide {
+  padding-bottom: 20vh;
 }
 
 html {

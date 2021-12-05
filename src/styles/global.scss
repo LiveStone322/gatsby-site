@@ -21,14 +21,9 @@ body {
   min-height: calc(var(--vh, 1vh) * 100);
 }
 
-.full-height,
-.slide {
+.full-height {
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
-}
-
-.slide {
-  padding-bottom: 20vh;
 }
 
 html {

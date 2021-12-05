@@ -1,5 +1,18 @@
+@use "../../styles/constants.scss" as c;
+
 .menu {
   height: 100%;
+}
+
+.separator {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: c.$color-white;
+  opacity: 0.5;
+  width: 3px;
+  height: 30em;
+  border-radius: 1px;
 }
 
 .scroll {
@@ -12,4 +25,5 @@
   &::-webkit-scrollbar {
     display: none;
   }
+  padding-left: 3em;
 }

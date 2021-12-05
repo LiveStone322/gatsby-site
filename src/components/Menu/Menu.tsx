@@ -5,15 +5,12 @@ import * as classes from "./Menu.module.scss"
 export default function Menu() {
   const scrollToElement = useCallback((elementId: string) => {
     return () => {
-      console.log(elementId)
-
-      // Somewhere else, even another file
       scroller.scrollTo(elementId, {
         duration: 500,
         delay: 0,
-        smooth: true,
+        smooth: "easeInOutCubic",
         containerId: "scrollContainer",
-        offset: -200, // Scrolls to element + 50 pixels down the page
+        offset: 0,
       })
     }
   }, [])

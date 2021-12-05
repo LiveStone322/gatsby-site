@@ -1,33 +1,24 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import * as React from "react"
 import PropTypes from "prop-types"
 import Menu from "../Menu"
 
 import * as classes from "./Layout.module.scss"
-import Scroll from "../Scroll/Scroll"
-
-console.log(classes)
 
 const Layout = ({ children }) => {
+  console.log(classes)
   return (
     <>
       <div className="container position-absolute">
-        <div className="row align-items-center min-full-height">
-          <section className={"col-3 " + classes.menu}>
+        <div className="row align-items-center justify-content-between min-full-height">
+          <section
+            className={"col-4 col-lg-3 d-none d-md-block " + classes.menu}
+          >
             <Menu />
           </section>
-          <div className={"col-1 " + classes.scroll}>
-            <Scroll value={0} maxValue={100} />
-          </div>
+          <hr className={"d-none d-lg-block " + classes.separator} />
           <main
             id="scrollContainer"
-            className={"col-8 full-height " + classes.content}
+            className={"col-12 col-md-8 full-height " + classes.content}
           >
             {children}
           </main>
